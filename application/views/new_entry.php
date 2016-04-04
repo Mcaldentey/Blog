@@ -7,7 +7,7 @@
 <body>
 	<?php include('menu.php');?>
 
-	<?=form_open(base_url().'blog/insert_entry/')?>
+	<?=form_open(base_url().'index.php/blog/insert_entry/')?>
 	<p>Title: <?=form_input('title')?></p>
 	<p>Content: <?=form_textarea('content')?></p>
 	<p>Tags:<?=form_input('tags')?> (comma separated)</p>
