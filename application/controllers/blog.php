@@ -10,9 +10,11 @@ class Blog extends CI_Controller {
                 $data['entries'] = $this->blog_model->getEntries();
                 $this->load->view('show_entries', $data);
         }
+
         public function entry(){
                 $this->load->view('new_entry');
         }
+        
         public function insert_entry(){
                 $entry = array(
                         'permalink' => permalink($this->input->post('title')),
