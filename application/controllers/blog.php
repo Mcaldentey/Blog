@@ -112,6 +112,7 @@ class Blog extends CI_Controller {
                 $id_entry = $this -> uri -> segment(3);
                 $this -> blog_model -> deleteEntry($id_entry);
                 redirect(base_url());
+
         }
 
         public function deleteEntry($id) {

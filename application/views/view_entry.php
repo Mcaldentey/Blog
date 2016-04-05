@@ -9,9 +9,10 @@
        
         <h2><?=$entry->title?></h2>
         <p><?=$entry->content?></p>
-        Author: <?=$entry->author?><br />
-        Date: <?=$entry->date?><br />
-        Tags: <?=tags($entry->tags)?><hr />
+        <h3>
+        Author: <?=$entry->author?> <br/>
+        Date: <?=$entry->date?> <br/>
+        Tags: <?=tags($entry->tags)?></h3>
 
         <?php
                 if(!empty($comments)){
@@ -25,13 +26,16 @@
                         echo '<h3>No Comments!</h3>';
         ?>
 
-        
-                        Your comment:
-                        <?=form_open(base_url().'index.php/blog/comment/')?>
-                        <?=form_hidden('id_blog', $this->uri->segment(3))?>
-                        <?=form_textarea('comment')?>
-                        <?=form_submit('submit','Send')?>
-                        <?=form_close()?>
+        <p>
+                Your comment:
+                <?=form_open(base_url().'index.php/blog/comment/')?>
+                <?=form_hidden('id_blog', $this->uri->segment(3))?>
+                <?=form_textarea('comment')?>
+                <?=form_submit('submit','Send')?>
+                <?=form_close()?>  
+
+        </p>
+                        
         
 
 </body>
