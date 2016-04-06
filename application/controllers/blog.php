@@ -31,7 +31,7 @@ class Blog extends CI_Controller {
                         $user = $this -> session -> userdata('name');
                 }
 
-                $entry = array(
+                $entry = array( 
                         'permalink' => permalink($this -> input -> post('title')),
                         'author' => $user,
                         'title' => $this -> input -> post('title'),
@@ -39,11 +39,11 @@ class Blog extends CI_Controller {
                         'date' => date('Y-m-d H:i:s'),
                         'tags' => $this -> input -> post('tags')
                         );             
-                $this -> blog_model -> insert('entries', $entry);
+                $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and call the function insert of blog_model
                 redirect(base_url());
         }
 
-        public function view(){ //
+        public function view(){ //Load the view of an entry
 
                 $entry_id = $this -> uri -> segment(3);
                 $data['entry'] = $this -> blog_model -> getEntry($entry_id);
@@ -51,7 +51,7 @@ class Blog extends CI_Controller {
                 $this -> load -> view('view_entry', $data);
         }
 
-        public function comment(){
+        public function comment(){ //Loads the Comentaries part of the view
                 
                 $id_blog = $this -> input -> post('id_blog');
 
@@ -70,7 +70,7 @@ class Blog extends CI_Controller {
                 redirect(base_url().'index.php/blog/view/'.$id_blog);
         }
 
-        public function edit() {
+        public function edit() { //Creates the entry from the edit option
                 
                 $id_entry = $this->uri->segment(3);
                 $data['entry_data'] = $this->blog_model->getEntryData($id_entry);  
@@ -78,7 +78,7 @@ class Blog extends CI_Controller {
                 $this->load->view('edit_entry', $data);
         }
 
-        public function getEntryData($entry) {
+        public function getEntryData($entry) { //Return the data from an entry
                 
                 $this->db->where('id', $entry);
                 $q = $this->db->get('entries');
@@ -87,7 +87,7 @@ class Blog extends CI_Controller {
         }
 
 
-        public function update_entry() {
+        public function update_entry() { //Confirms the edit and redirect to that entry
                 
                 $id = $this -> input -> post('id');
                 $entry = array(
@@ -107,7 +107,7 @@ class Blog extends CI_Controller {
                 return $this -> db -> update('entries', $data);
         }
 
-        public function delete() {
+        public function delete() { //Two functions to delete Entries
 
                 $id_entry = $this -> uri -> segment(3);
                 $this -> blog_model -> deleteEntry($id_entry);

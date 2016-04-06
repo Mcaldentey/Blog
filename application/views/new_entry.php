@@ -8,9 +8,9 @@
 	<?php include('menu.php');?>
 
 	<?=form_open(base_url().'index.php/blog/insert_entry/')?>
-	<p>Title: <?=form_input('title')?></p>
-	<p>Content: <?=form_textarea('content')?></p>
-	<p>Tags:<?=form_input('tags')?> (comma separated)</p>
-	<?=form_submit('submit', 'Insert')?>
+	<p>Title: <br/><?=form_input('title')?></p>
+	<p>Content: <br/><?=form_textarea('content', '', 'class="textarea" placeholder="Content here"')?></p>
+	<p>Tags: <br/><?=form_input('tags')?> (comma separated)</p>
+	<?=form_submit('submit', 'Insert', 'class="buttonGrey"')?> <!-- Creates the form to create an Entry -->
 </body>
 </html>

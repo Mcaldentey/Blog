@@ -7,12 +7,14 @@
 <body>
         <?php include('menu.php');?>
        
-        <h2><?=$entry->title?></h2>
-        <p><?=$entry->content?></p>
+        <h2><?=$entry -> title?></h2>
+        <div class="p">
+                <p class="margin"><?=$entry -> content?></p>
+        </div>
         <h3>
-        Author: <?=$entry->author?> <br/>
-        Date: <?=$entry->date?> <br/>
-        Tags: <?=tags($entry->tags)?></h3>
+        Author: <?= $entry -> author?> <br/>
+        Date: <?= $entry -> date?> <br/>
+        Tags: <?= tags($entry -> tags)?></h3> <!-- Loads the data from the Entry -->
 
         <?php
                 if(!empty($comments)){
@@ -23,18 +25,19 @@
                                 $comment->date.'<hr />';
                 }
                 else
-                        echo '<h3>No Comments!</h3>';
-        ?>
+                        echo '<h4>No Comments!</h4>';
+        ?> <!-- Loads  the coments -->
 
         <p>
                 Your comment:
                 <?=form_open(base_url().'index.php/blog/comment/')?>
-                <?=form_hidden('id_blog', $this->uri->segment(3))?>
+                <?=form_hidden('id_blog', $this -> uri -> segment(3))?>
                 <?=form_textarea('comment')?>
-                <?=form_submit('submit','Send')?>
+                <br/>
+                <?=form_submit('submit','Send', 'class="buttonGrey"')?>
                 <?=form_close()?>  
 
-        </p>
+        </p> <!-- Make the option to submit a comment -->
                         
         
 

@@ -7,10 +7,10 @@
 <body>
         <?php include('menu.php');?>
        
-        <?=form_open(base_url().'index.php/users/validate/')?> <!-- carga lo que abre el botón-->
+        <?=form_open(base_url().'index.php/users/validate/')?> 
         <?php echo (isset($error)) ? '<p>Incorrect Data!</p>' : '';?>
         <p>Username: <?=form_input('username')?></p>   
-        <p>Password: <?=form_password('password')?></p>
+        <p>Password: <?=form_password('password')?></p> <!-- Open one input from user and one passowrd  -->
         <?=form_submit('submit', 'Log In')?>
 </body>
 </html>
