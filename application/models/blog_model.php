@@ -17,7 +17,7 @@ class Blog_model extends CI_Model {
 
         $this -> db ->where('username', $username);
         $this -> db ->where('password', $password);
-        return $this -> db -> get('admins')->row();
+        return $this -> db -> get('users')->row();
     }
 
         public function getEntry($id){ // get the Entty with that id
@@ -66,5 +66,9 @@ class Blog_model extends CI_Model {
         public function deleteEntry($id) {
 
             return $this->db->delete('entries', array('id' => $id)); 
+        }
+
+        public function getUsers(){
+            return $this -> db -> get('users') -> result();            
         }
     }

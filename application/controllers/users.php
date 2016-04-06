@@ -8,6 +8,11 @@ class Users extends CI_Controller{
         public function signin(){
                 $this -> load -> view('signin');
         }
+
+        public function users_registred(){
+                $data['all_users'] = $this -> blog_model -> getUsers();
+                $this -> load -> view('view_users', $data);
+        }
         
         
         public function validate(){ //function that validates if the user introduced exists on the database
@@ -32,5 +37,9 @@ class Users extends CI_Controller{
                 if($this->session->userdata('is_logged_in'))
                         $this -> session -> sess_destroy();        
                 redirect(base_url());                  
+        }
+
+        public function register() {
+                $this -> load -> view('user_register');
         }
 }

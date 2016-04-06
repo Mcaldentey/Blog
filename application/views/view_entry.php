@@ -6,26 +6,28 @@
 </head>
 <body>
         <?php include('menu.php');?>
-        
-        <h2><?=$entry -> title?></h2>
-        <div class="p">
-                <p class="margin"><?=$entry -> content?></p>
-        </div>
-        <h3>
-                Author: <?= $entry -> author?> <br/>
-                Date: <?= $entry -> date?> <br/>
-                Tags: <?= tags($entry -> tags)?></h3> <!-- Loads the data from the Entry -->
+        <div class="entries">
+                <h2><?=$entry -> title?></h2>
+                <div class="p">
+                        <p class="margin"><?=$entry -> content?></p>
+                </div>
+                <h3>
+                        Author: <?= $entry -> author?> <br/>
+                        Date: <?= $entry -> date?> <br/>
+                        Tags: <?= tags($entry -> tags)?>
+                </h3> <!-- Loads the data from the Entry -->
 
                 <?php
-                if(!empty($comments)){
-                        echo '<p>Comments</p>';
-                        foreach($comments as $comment)
+                        if(!empty($comments)){
+                                echo '<p>Comments</p>';
+                                foreach($comments as $comment)
                                 echo '<h3>'.$comment->author.'</h3>'. '<div class="p"><p class="comment">' .$comment->comment. '</p> <h3>' . $comment->date.' </h3> <hr />';
-                }
-                else
-                        echo '<h4>No Comments!</h4>';
-                ?> <!-- Loads  the coments -->
-
+                        }
+                        else{
+                                echo '<h4>No Comments!</h4>';
+                        }
+                        ?> <!-- Loads  the coments -->
+                
                 <p>
                         Your comment:
                         <?=form_open(base_url().'index.php/blog/comment/')?>
@@ -36,8 +38,8 @@
                         <?=form_close()?>  
 
                 </p> <!-- Make the option to submit a comment -->
-                
-                
 
-        </body>
-        </html>
+
+        <div class="entries">
+</body>
+</html>

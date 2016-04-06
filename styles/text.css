@@ -1,8 +1,19 @@
 
 body {
-	margin-left: 100px;
-	margin-right: 100px;
+	
 	/*background-color: #ECEFF1;*/
+}
+
+.entries {
+	margin: 0 25% 0 25%;
+
+}
+.table {
+	text-align: justify;
+	color: #666; 
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 18px; 
+	line-height: 32px; 
 }
 
 a {
@@ -14,7 +25,7 @@ a {
 }
 
 p { 
-	
+	text-align: justify;
 	color: #666; 
 	font-family: 'Source Sans Pro', sans-serif; 
 	font-size: 18px; 
@@ -69,3 +80,4 @@ hr {
 	background: #333;
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
