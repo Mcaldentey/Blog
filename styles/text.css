@@ -2,13 +2,15 @@
 body {
 	margin-left: 100px;
 	margin-right: 100px;
-    /*background-color: #ECEFF1;*/
+	/*background-color: #ECEFF1;*/
 }
 
 a {
+	font-style: normal;
 	text-decoration: none;	
 	color: #455A64; 
 	font-family: 'Source Sans Pro', sans-serif; 
+
 }
 
 p { 
@@ -18,9 +20,14 @@ p {
 	font-size: 18px; 
 	line-height: 32px; 
 	
-	}
+}
 p.margin {
 	margin-left: 50px;
+}
+
+p.comment {
+	margin-left: 50px;
+	font-size: 14px
 }
 
 h2 { 
@@ -56,9 +63,9 @@ h4 {
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    color: #666;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	border: 0;
+	height: 1px;
+	color: #666;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }

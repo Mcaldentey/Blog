@@ -177,7 +177,21 @@ switch (ENVIRONMENT)
  */
 	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
+/*
+    //CONFIG OF THE WURFL API
 
+    // Provide the absolute or relative path to your wurfl-config.xml
+    $wurflConfigFile = "wurfl-php-1.7.0.0\examples\wurfl-config.xml";
+
+    // Create WURFL Configuration from an XML config file
+    $wurflConfig = new WURFL_Configuration_XmlConfig($wurflConfigFile);
+
+    // Create a WURFL Manager Factory from the WURFL Configuration
+    $wurflManagerFactory = new WURFL_WURFLManagerFactory($wurflConfig);
+
+    // Create a WURFL Manager
+    $wurflManager = $wurflManagerFactory->create();
+*/
 
 // --------------------------------------------------------------------
 // END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
@@ -313,3 +327,5 @@ switch (ENVIRONMENT)
  */
 require_once BASEPATH.'core/CodeIgniter.php';
 
+// Include the WURFL/Application.php file
+    require_once "wurfl-php-1.7.0.0\WURFL\Application.php";

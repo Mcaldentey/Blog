@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    
+
 <html lang="en">
 <head>
     <meta charset="utf-8">    
@@ -13,9 +13,9 @@
 
 </head>
 <body>
-        <div class="nav">
-            <ul>            
-                    <?php
+    <div class="nav">
+        <ul>            
+            <?php
 
 
                         if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays Logout
@@ -26,7 +26,7 @@
                             echo  '<h1> <?= $conected ?> </h1>'.' '. anchor(base_url()."index.php/users/logout/", "Logout").' ';
                             echo "</a></li>";
                         } else {
-                        
+                            
                             echo ' <li class="Sign in"><a class="active" href="#">';
                             echo anchor(base_url().'index.php/users/signin/','Sign In').' ';
                             echo '</a></li>';
@@ -44,8 +44,8 @@
                         echo '</a></li>';
 
                         ?>
-            </ul>
+                    </ul>
 
-            <hr/>
-        </div>        
-</body>
+                    <hr/>
+                </div>        
+            </body>
