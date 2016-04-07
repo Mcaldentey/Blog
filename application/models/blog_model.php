@@ -71,4 +71,12 @@ class Blog_model extends CI_Model {
         public function getUsers(){
             return $this -> db -> get('users') -> result();            
         }
+
+        public function enterUser($name, $username, $password) {
+
+            $this->db->set('name', $name); 
+            $this->db->set('username', $username);
+            $this->db->set('password', $password);
+            return $this->db->insert('users');
+        }
     }

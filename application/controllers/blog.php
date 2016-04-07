@@ -101,12 +101,6 @@ class Blog extends CI_Controller {
             redirect(base_url() . 'index.php/blog/view/' . $id);
         }
 
-        public function updateEntry($id, $data) {
-            
-            $this -> db -> where('id', $id);
-            return $this -> db -> update('entries', $data);
-        }
-
         public function delete() { //Two functions to delete Entries
 
             $id_entry = $this -> uri -> segment(3);

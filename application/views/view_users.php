@@ -8,7 +8,7 @@
 <body>
 
 	<?php include('menu.php');?>
-	<? anchor(base_url()."index.php/users/register/", "New User") ?>
+	
 	<div class="entries">
 		<table id="users" class="display" cellspacing="0" width="100%">
 			<thead>
@@ -34,6 +34,7 @@
 			</tbody>			
 			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
 			<script>
 				$(function(){
 					$("#users").dataTable();
@@ -41,7 +42,7 @@
 			</script>
 
 			<?php
-				echo anchor(base_url()."index.php/users/register/", "New User", 'class="buttonGrey"') . '<br/>' 
+				echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' 
 			?>
 			<br/>		
 	</body>

@@ -38,8 +38,22 @@ class Users extends CI_Controller{
                         $this -> session -> sess_destroy();        
                 redirect(base_url());                  
         }
-
-        public function register() {
+  
+        public function new_user() {
                 $this -> load -> view('user_register');
+        }
+
+        public function register(){ //Register an user to the database
+                $name = $this->input->post('name');
+                $username = $this->input->post('username');
+                $password = $this->input->post('password');
+                $user = array(
+                        'name' => $name,
+                        'username' => $username,
+                        'password' => ($password)
+                        );
+                if($this->blog_model->insert('users', $user)){                        
+                        redirect(base_url());
+                }
         }
 }
