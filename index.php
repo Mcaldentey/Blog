@@ -328,4 +328,5 @@ switch (ENVIRONMENT)
 require_once BASEPATH.'core/CodeIgniter.php';
 
 // Include the WURFL/Application.php file
-    require_once "wurfl-php-1.7.0.0\WURFL\Application.php";
+require_once "wurfl-php-1.7.0.0\WURFL\Application.php";
+require_once('C:\xampp\htdocs\blog\wurfl-dbapi-1.7.0.0\TeraWurfl.php');
