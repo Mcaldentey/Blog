@@ -12,8 +12,7 @@ class Blog extends CI_Controller {
             $data['entries'] = $this->blog_model->getEntries();     
             
             if ($this->session->userdata('is_logged_in')) {
-                $username = $this->session->userdata('username');
-                $data['my_entries'] = $this->blog_model->getMyEntries($username);    
+                $username = $this->session->userdata('username');                
             }
             
             $this->load->view('show_entries', $data);
@@ -37,7 +36,8 @@ class Blog extends CI_Controller {
                 'title' => $this -> input -> post('title'),
                 'content' => $this -> input -> post('content'),
                 'date' => date('Y-m-d H:i:s'),
-                'tags' => $this -> input -> post('tags')
+                'tags' => $this -> input -> post('tags'),
+                'image' => $this -> input -> post('image')
                 );             
                 $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and call the function insert of blog_model
                 redirect(base_url());

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>        
@@ -11,8 +10,8 @@
 
 </head>
 <body>
-    <?php include('menu.php');?>
-    <div class="entries">
+    <?php include('menu.php');?>    
+    <div class="entries">  
         <?php if (!empty($entries)) : ?> <!-- Shows all the entries -->
             <?php foreach($entries as $entry) : ?>
                 <?php                            
@@ -26,7 +25,7 @@
                 }
                 
                 ?>
-                
+                <?php echo'<img src="'.$entry -> image.'" class="resizeSmall" />' ?>    
                 <h2><a><?=anchor(base_url().'index.php/blog/view/'.$entry -> id, $entry -> title)?></a></h2>
 
                 <div class="h3">
@@ -36,7 +35,8 @@
                         echo '<h5>Options</h5>';
                         echo '</div>';
                     }                     
-                    ?>                    
+                    ?>  
+                    <br/>                  
                     <div id="options" class="options">
                         <h5 class="margin">  
                             <?=anchor(base_url().'index.php/blog/edit/'.$entry -> id, $edit)?>                        

@@ -1,0 +1,14 @@
+img.resizeSmall{
+    width:200px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    
+}
+
+img.resizeBig{
+	margin-top: 20px;
+	margin-bottom: 20px;
+    width:auto;
+    height: auto;
+}

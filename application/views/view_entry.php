@@ -6,8 +6,9 @@
 </head>
 <body>
         <?php include('menu.php');?>
-        <div class="entries">
+        <div class="entries">                
                 <h2><?=$entry -> title?></h2>
+                <?php echo '<img src="'.$entry -> image.'" class="resizeBig">' ?>
                 <div class="p">
                         <p class="margin"><?=$entry -> content?></p>
                 </div>

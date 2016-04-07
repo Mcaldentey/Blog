@@ -6,6 +6,7 @@
 
     <!-- CSS links -->
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/text.css'>
+    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/images.css'>
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/button.css'>
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/navigationbar.css'> 
 

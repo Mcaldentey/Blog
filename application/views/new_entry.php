@@ -11,7 +11,9 @@
 		<?=form_open(base_url().'index.php/blog/insert_entry/')?>
 		<p>Title: <br/><?=form_input('title','', 'class="title"')?></p>
 		<p>Content: <br/><?=form_textarea('content', '', 'class="textarea" placeholder="Content here"')?></p>
+		<p>Image: <br/><?=form_input('image', '', 'class="title" placeholder="Image url"')?></p>
 		<p>Tags: <br/><?=form_input('tags', '', 'placeholder="Comma separated"')?></p>
+
 		<?=form_submit('submit', 'Insert', 'class="buttonGrey"')?> <!-- Creates the form to create an Entry -->
 	</div>
 </body>

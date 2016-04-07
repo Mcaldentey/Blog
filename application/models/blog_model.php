@@ -32,21 +32,6 @@ class Blog_model extends CI_Model {
             return $this -> db -> get('comments') -> result();
         }
 
-        public function getMyEntries($username) {  //Shows the entries of an user 
-            
-            $this->db->select('id');
-            $this->db->where('author', $username);
-            $res = $this->db->get('entries')->result();
-            
-            $results = array();
-            if (!empty($res)) {
-                foreach ($res as $k => $v) {
-                    array_push($results, $v->id);
-                }    
-            }
-            
-            return $results;
-        }
 
         public function getEntryData($entry) {
 
