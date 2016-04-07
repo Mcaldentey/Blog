@@ -3,6 +3,7 @@ img.resizeSmall{
     height: auto;
     float: left;
     margin-right: 20px;
+    border:1px solid #666;
     
 }
 
@@ -11,4 +12,15 @@ img.resizeBig{
 	margin-bottom: 20px;
     width:auto;
     height: auto;
+}
+
+img.logo{
+    width:150px;
+    height: auto;
+    float: left;   
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-right: -250px;
+    
+   
 }

@@ -15,7 +15,7 @@
     <script>
 
         $(document).ready(function(){
-       
+
             $('#menu').click(function(){
                 if ($(".options").css("display") === ("block")) {
                     $(".options").hide();                 
@@ -33,18 +33,19 @@
 <body>
 
     <div class="nav">
-        <ul>            
+        <img src="http://i.imgur.com/HSfikT0.png" class="logo">
+        <ul>              
             <?php
                 if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays Logout
                     $conected = $this->session->userdata('name');
                     echo '<li class="user"><b>'.$this->session->userdata('name').'</b></li>';
 
                     echo '<li class="Logout"><a href="#">';
-                    echo  '<h1> <?= $conected ?> </h1>'.' '. anchor(base_url()."index.php/users/logout/", "Logout").' ';
+                    echo  anchor(base_url()."index.php/users/logout/", "Logout");
                     echo "</a></li>";
                 } else {
 
-                    echo ' <li class="Sign in"><a class="active" href="#">';
+                    echo ' <li class="Sign in"><a href="#">';
                     echo anchor(base_url().'index.php/users/signin/','Sign In').' ';
                     echo '</a></li>';
                 }
@@ -59,18 +60,18 @@
                     echo '</a></li>';                    
                 } 
 
-
                 echo '<li class="All Entries"><a href="#">';
                 echo anchor(base_url(), 'All Entries'); //Shows all entries
                 echo '</a></li>';
-                ?>
-            </ul>
-            <div class="hr"><hr class="blue" /></div>
+                ?>        
+        </ul>
 
-        </div>        
+        <div class="hr"><hr class="blue" /></div>
 
-        
-        <?php
+    </div>        
+
+
+    <?php
 /*
             // Provide the absolute or relative path to your wurfl-config.xml
         $wurflConfigFile = "wurfl-php-1.7.0.0\examples\wurfl-config.xml";

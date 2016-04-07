@@ -1,5 +1,5 @@
 .nav {
-  margin-left: -8px;
+  margin-left: -50px;
   margin-top: -16px;
   margin-right: -8px;
 
@@ -8,10 +8,11 @@
 .nav ul {
   list-style: none;
   background-color: #444;
-  text-align: center;
+  text-align: center;   
 }
 
 .nav li {
+  margin-left: 20px;
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
   line-height: 40px;
@@ -28,6 +29,7 @@
 
 .nav b {
 
+  display: inline;
   text-decoration: none;
   color: #fff;
   display: block;
@@ -65,4 +67,3 @@ hr.blue {
   background: #78909C;  
   margin-bottom: 100px;
 }
-  

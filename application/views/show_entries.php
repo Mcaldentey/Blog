@@ -25,7 +25,7 @@
                 }
                 
                 ?>
-                <?php echo'<img src="'.$entry -> image.'" class="resizeSmall" />' ?>    
+                <?php echo'<a href="'.'index.php/blog/view/'.$entry -> id.'"><img src="'.$entry -> image.'" class="resizeSmall" /></a>' ?>    
                 <h2><a><?=anchor(base_url().'index.php/blog/view/'.$entry -> id, $entry -> title)?></a></h2>
 
                 <div class="h3">
