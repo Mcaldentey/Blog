@@ -44,6 +44,6 @@
 			<?php
 				echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' 
 			?>
-			<br/>		
+			<br/>		   
 	</body>
 	</html>

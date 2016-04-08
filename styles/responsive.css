@@ -1,0 +1,78 @@
+
+@media screen and (max-width: 1200px) {
+
+  .logo {
+    display: none;
+  }
+  
+  .device {
+    display: none;
+  }
+
+  .deviceMobile {
+    display: inline;
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+  img.resizeSmall{
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+
+  .nav li {
+    margin-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 100px; 
+    display: block;  
+  }
+
+  .nav ul{
+    height: auto;
+
+  }
+
+  .nav li {
+    width: auto;
+    height: auto;
+  }
+
+  img.resizeBig{
+    display: none;
+  }
+
+  .entries {  
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  p.margin {
+    margin-left: 0;
+  }
+
+.buttonGrey {
+  width: 100%;
+  }
+
+input  {
+  width: 100%
+}
+
+textarea {
+
+ width: 100%;
+}
+
+.title {
+  width: 100%;
+}
+}

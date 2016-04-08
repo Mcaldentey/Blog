@@ -19,6 +19,11 @@ class Users extends CI_Controller{
         public function validate(){ //function that validates if the user introduced exists on the database
                 $username = $this -> input -> post('username');
                 $password = $this -> input -> post('password');
+
+                if ((strlen($username) == 0)  or (strlen($password) == 0 ) ) {
+                        $this -> load -> view('signin', array('error'=>TRUE));
+
+                }
                 if($user = $this -> blog_model -> validate_credentials($username, $password)){
                         $session = array(
                                 'name' => $user -> name,
@@ -39,7 +44,7 @@ class Users extends CI_Controller{
                         $this -> session -> sess_destroy();        
                 redirect(base_url());                  
         }
-  
+
         public function new_user() {
                 $this -> load -> view('user_register');
         }
@@ -48,13 +53,19 @@ class Users extends CI_Controller{
                 $name = $this->input->post('name');
                 $username = $this->input->post('username');
                 $password = $this->input->post('password');
-                $user = array(
-                        'name' => $name,
-                        'username' => $username,
-                        'password' => ($password)
-                        );
-                if($this->blog_model->insert('users', $user)){                        
-                        redirect(base_url());
+
+                if ( ( strlen($name) == 0 ) or ( strlen($username) == 0 ) or ( strlen($password) == 0 ) ){
+                        $this -> load -> view('user_register', array('error'=>TRUE));
+                } else {
+
+                        $user = array(                                
+                                'name' => $name,
+                                'username' => $username,
+                                'password' => ($password)
+                                );
+                        if($this -> blog_model -> insert('users', $user)){                        
+                                redirect(base_url());
+                        }
                 }
         }
 }

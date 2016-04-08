@@ -1,17 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Blog_model extends CI_Model {
-    
-        public function getEntries(){ //get al the entries from the database in desc order
-            
-            $this -> db -> order_by('date DESC');
-            return $this -> db -> get('entries')->result();
-        }
-        
-        public function insert($table, $data){ //insert a table on the database
-            
-            return $this -> db -> insert($table, $data);
-        }
 
+    public function getEntries(){ //get al the entries from the database in desc order
+
+        $this -> db -> order_by('date DESC');
+        return $this -> db -> get('entries')->result();
+    }
+
+    public function insert($table, $data){ //insert a table on the database
+
+        return $this -> db -> insert($table, $data);
+    }
 
 	public function validate_credentials($username, $password){ // return the row on the Db from that user and that password
 
@@ -65,5 +64,5 @@ class Blog_model extends CI_Model {
             return $this->db->insert('users');
         }
 
-    
+
     }

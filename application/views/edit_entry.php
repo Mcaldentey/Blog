@@ -18,5 +18,6 @@
 	    <p>Tags: <br/><?=form_input('tags', '', 'placeholder="Comma separated"')?></p>
 	    <?=form_submit('submit', 'Update', 'class="buttonGrey"')?>
 	</div>
+	<?php include('footer.php');?>    
 </body>
 </html>

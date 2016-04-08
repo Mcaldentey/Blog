@@ -2,12 +2,24 @@
 	margin: 0 25% 0 25%;
 
 }
+
 .table {
 	text-align: justify;
 	color: #666; 
 	font-family: 'Source Sans Pro', sans-serif; 
 	font-size: 18px; 
 	line-height: 32px; 
+}
+
+
+.device {
+  margin-left: 100px;
+  margin-right: -200px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  display: inline;
+  color: #ffffff;
+
 }
 
 a {
@@ -33,6 +45,15 @@ p.margin {
 p.comment {
 	margin-left: 50px;
 	font-size: 14px
+}
+
+.deviceMobile {
+  font-style: normal;
+  text-decoration: none;  
+  color: #455A64; 
+  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif; 
+  display: none;
 }
 
 h2 { 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/images.css'>
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/button.css'>
     <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/navigationbar.css'> 
+    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/responsive.css'> 
 
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
@@ -81,17 +82,17 @@
                 ?>
 
                 <?php
-                // Include the autoloader - edit this path! 
+                    // Include the autoloader
                 require_once 'wurfl/src/autoload.php'; 
-                // Create a configuration object  
+                    // Create a configuration object  
                 $config = new ScientiaMobile\WurflCloud\Config();  
-                // Set your WURFL Cloud API Key  
+                    // Set your WURFL Cloud API Key  
                 $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
-                // Create the WURFL Cloud Client  
+                    // Create the WURFL Cloud Client  
                 $client = new ScientiaMobile\WurflCloud\Client($config);  
-                // Detect your device  
+                    // Detect your device  
                 $client->detectDevice();  
-                // Use the capabilities  
+                    // Use the capabilities  
                 echo '<div class="device">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
                 ?>       
             </ul>

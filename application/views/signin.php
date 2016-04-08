@@ -12,6 +12,6 @@
 		<p>Username: <br/><?=form_input('username')?></p>   
 		<p>Password: <br/><?=form_password('password')?></p> <!-- Open one input from user and one passowrd  -->
 		<?=form_submit('submit', 'Log In', 'class="buttonGrey"')?>
-	</div>
+	</div>   
 </body>
 </html>

@@ -25,23 +25,37 @@ class Blog extends CI_Controller {
         
         public function insert_entry(){ //Add a new entry with the data submited from the view new_entry
             
-            $user = 'Anonymous';
-            if ( $this -> session -> userdata('is_logged_in')) {
-                $user = $this -> session -> userdata('name');
-            }
+            $title = $this -> input -> post('title');
+            $content = $this -> input -> post('content');
+            $image = $this -> input -> post('image');
+            $tags = $this -> input -> post('tags');
 
-            $entry = array( 
-                'permalink' => permalink($this -> input -> post('title')),
-                'author' => $user,
-                'title' => $this -> input -> post('title'),
-                'content' => $this -> input -> post('content'),
-                'date' => date('Y-m-d H:i:s'),
-                'tags' => $this -> input -> post('tags'),
-                'image' => $this -> input -> post('image')
-                );             
-                $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and call the function insert of blog_model
-                redirect(base_url());
+            //Check that all the fields are completed
+            if ( (strlen($title) == 0 ) or (strlen($content) == 0 ) or (strlen($image) == 0 ) or (strlen($tags) == 0 ) ) {
+
+               $this -> load -> view('new_entry', array('error'=>TRUE));
+
+            } else {
+                $user = 'Anonymous';
+
+                if ( $this -> session -> userdata('is_logged_in')) {
+                    $user = $this -> session -> userdata('name');
+                }
+
+                $entry = array( 
+                    'permalink' => permalink($this -> input -> post('title')),
+                    'author' => $user,
+                    'title' => $this -> input -> post('title'),
+                    'content' => $this -> input -> post('content'),
+                    'date' => date('Y-m-d H:i:s'),
+                    'tags' => $this -> input -> post('tags'),
+                    'image' => $this -> input -> post('image')
+                    );             
+                    $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and call the function insert of blog_model
+                    redirect(base_url());
             }
+            }
+            
 
         public function view(){ //Load the view of an entry
 

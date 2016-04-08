@@ -10,12 +10,13 @@
 	<div class="entries">
 
         <?=form_open(base_url().'index.php/users/register/')?>
+        <?php echo (isset($error)) ? '<p>Please complete the fields!</p>' : '';?>
         <p>Name: <br/><?=form_input('name', '', 'id="register_name"')?></p>
         <p>Username: <br/><?= form_input('username', '', 'id="register_username"') ?></p>
         <p>Password: <br/><?=form_password('password', '', 'id="register_password"')?></p>
         <?=form_submit('submit', 'Register', 'class="buttonGrey"')?>
 
 	 </div> 
-
+ 
 </body>
 </html>

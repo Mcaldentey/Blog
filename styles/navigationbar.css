@@ -12,12 +12,17 @@
 }
 
 .nav li {
-  margin-left: 20px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 100px;  
-  
+  min-width: 120px;
+  width: auto;
+  border-bottom: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+}
+/* Option 1 - Display Inline */
+.nav li {
+  display: inline-block;
+  margin-right: -4px;
 }
 
 .nav a {
@@ -27,8 +32,9 @@
   transition: .3s background-color;
 }
 
-.nav b {
-
+b {
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-style: normal;
   display: inline;
   text-decoration: none;
   color: #fff;
@@ -46,35 +52,41 @@
   cursor: default;
 }
 
-@media screen and (min-width: 600px) {
-  .nav li {
-    min-width: 120px;
-    width: auto;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-  }
-  
-  /* Option 1 - Display Inline */
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
-  }
 
-  hr.blue {
-    margin-top: -18px;
-    height: 20px;
-    background: #78909C;  
-    margin-bottom: 100px;
-  }
 
-  .device {
-    margin-left: 100px;
-    margin-right: -200px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    display: inline;
-    color: #ffffff;
+hr.blue {
+  margin-top: -18px;
+  height: 20px;
+  background: #78909C;  
+  margin-bottom: 100px;
+}
 
-  }
+hr.bot {
+  margin-bottom: 0px;
+  margin-right: -8px;
+  margin-left: -8px;
+  height: 20px;
+  background: #78909C;  
+}
+
+.footer {
+  line-height: 50px;
+  margin-right: -8px;
+  margin-left: -8px;
+  height: 50px;
+  background: #444;
+  border-bottom: none;
+}
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+  height: 50px; /* .push must be the same height as .footer */
+}
