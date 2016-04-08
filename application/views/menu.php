@@ -27,8 +27,8 @@
             });
 
             $('#name').click(function(){
-                
-                
+
+
             });
 
         });
@@ -70,13 +70,18 @@
                     echo '<li class="New Entry"><a href="#">';
                     echo anchor(base_url().'index.php/blog/entry/', 'New Entry');
                     echo '</a></li>';
+                }
 
+                if ($this -> session -> userdata('username') == 'admin') {                     
                     echo '<li class="Users"><a href="#">';
                     echo anchor(base_url().'index.php/users/users_registred/', 'Users');
-                    echo '</a></li>';                    
-                } 
+                    echo '</a></li>'; 
+             }                     
 
-                echo '<li class="All Entries"><a href="#">';
+
+         
+
+         echo '<li class="All Entries"><a href="#">';
                 echo anchor(base_url(), 'All Entries'); //Shows all entries
                 echo '</a></li>';
                 ?>

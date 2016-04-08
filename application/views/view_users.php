@@ -10,6 +10,11 @@
 	<?php include('menu.php');?>
 	
 	<div class="entries">
+
+		<?php
+		echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' 
+		?>
+		</br>
 		<table id="users" class="display" cellspacing="0" width="100%">
 			<thead>
 				<tr>
@@ -31,19 +36,20 @@
 
 					<?php endforeach; ?>        
 				<?php endif; ?>
-			</tbody>			
-			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-			<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+			</tbody>
+		</table>
+	</div>			
+	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-			<script>
-				$(function(){
-					$("#users").dataTable();
-				})
-			</script>
+	<script>
+		$(function(){
+			$("#users").dataTable();
+		})
+	</script>
+	</br></br>
+	<?php include('footer.php');?>    
 
-			<?php
-				echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' 
-			?>
-			<br/>		   
-	</body>
-	</html>
+
+</body>
+</html>
