@@ -48,7 +48,8 @@
 
 @media screen and (min-width: 600px) {
   .nav li {
-    width: 120px;
+    min-width: 100px;
+    width: auto;
     border-bottom: none;
     height: 50px;
     line-height: 50px;
@@ -61,9 +62,19 @@
     margin-right: -4px;
   }
 
-hr.blue {
-  margin-top: -18px;
-  height: 20px;
-  background: #78909C;  
-  margin-bottom: 100px;
-}
+  hr.blue {
+    margin-top: -18px;
+    height: 20px;
+    background: #78909C;  
+    margin-bottom: 100px;
+  }
+
+  .device {
+    margin-left: 100px;
+    margin-right: -200px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    display: inline;
+    color: #ffffff;
+
+  }

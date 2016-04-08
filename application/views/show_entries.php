@@ -11,6 +11,7 @@
 </head>
 <body>
     <?php include('menu.php');?>    
+
     <div class="entries">  
         <?php if (!empty($entries)) : ?> <!-- Shows all the entries -->
             <?php foreach($entries as $entry) : ?>

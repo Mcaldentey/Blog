@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php require_once 'wurfl/src/autoload.php'; ?>
 <html lang="en">
 <head>
     <meta charset="utf-8">    
@@ -63,46 +63,27 @@
                 echo '<li class="All Entries"><a href="#">';
                 echo anchor(base_url(), 'All Entries'); //Shows all entries
                 echo '</a></li>';
-                ?>        
-        </ul>
+                ?>
 
-        <div class="hr"><hr class="blue" /></div>
+                <?php
+                // Include the autoloader - edit this path! 
+                require_once 'wurfl/src/autoload.php'; 
+                // Create a configuration object  
+                $config = new ScientiaMobile\WurflCloud\Config();  
+                // Set your WURFL Cloud API Key  
+                $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
+                // Create the WURFL Cloud Client  
+                $client = new ScientiaMobile\WurflCloud\Client($config);  
+                // Detect your device  
+                $client->detectDevice();  
+                // Use the capabilities  
+                echo '<div class="device">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
+                ?>       
+            </ul>
+            <div class="hr"><hr class="blue" /></div>
 
-    </div>        
+        </div>        
 
-
-    <?php
-/*
-            // Provide the absolute or relative path to your wurfl-config.xml
-        $wurflConfigFile = "wurfl-php-1.7.0.0\examples\wurfl-config.xml";
-
-    // Create WURFL Configuration from an XML config file
-        $wurflConfig = new WURFL_Configuration_XmlConfig($wurflConfigFile);
-
-    // Create a WURFL Manager Factory from the WURFL Configuration
-        $wurflManagerFactory = new WURFL_WURFLManagerFactory($wurflConfig);
-
-    // Create a WURFL Manager
-        $wurflManager = $wurflManagerFactory->create();
-
-        require_once('C:\xampp\htdocs\blog\wurfl-dbapi-1.7.0.0\TeraWurfl.php');
-            // instantiate a new TeraWurfl object
-        $wurflObj = new TeraWurfl();
-
-            // Get the capabilities of the current client.
-        $wurflObj->getDeviceCapabilitiesFromRequest();
-
-        $device_name = $wurflObj -> getDeviceCapability('device_name');
-        $is_tablet = $wurflObj -> getDeviceCapability('is_tablet');
-        $is_smartphone = $wurflObj -> getDeviceCapability('is_smartphone');
-
-        if ($is_tablet) {
-            echo '<p>Is a tablet</p>';
-        } elseif ($is_smartphone) {
-            echo '<p>Is a smartphone</p> <p>'.$device_name.'</p>';
-        }
-*/        
-        ?>
     </body>
 
 
