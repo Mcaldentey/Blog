@@ -8,6 +8,7 @@ class Users extends CI_Controller{
         public function signin(){
                 $this -> load -> view('signin');
         }
+        
 
         public function users_registred(){
                 $data['all_users'] = $this -> blog_model -> getUsers();

@@ -25,7 +25,18 @@
                 
             });
 
+            $('#name').click(function(){
+                
+                
+            });
+
         });
+
+        function users_register_not_empty(){
+            if ($('#register_name').length === 0) {
+                return false;
+            }
+        }
 
     </script>
 
@@ -33,7 +44,7 @@
 <body>
 
     <div class="nav">
-        <img src="http://i.imgur.com/HSfikT0.png" class="logo">
+        <?php echo '<a href="'.base_url().'"><img src="http://i.imgur.com/HSfikT0.png" class="logo"></a>' ?>
         <ul>              
             <?php
                 if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays Logout
@@ -44,6 +55,10 @@
                     echo  anchor(base_url()."index.php/users/logout/", "Logout");
                     echo "</a></li>";
                 } else {
+
+                    echo ' <li class="Sign up"><a href="#">';
+                    echo anchor(base_url().'index.php/users/new_user/','Sign Up').' ';
+                    echo '</a></li>';
 
                     echo ' <li class="Sign in"><a href="#">';
                     echo anchor(base_url().'index.php/users/signin/','Sign In').' ';

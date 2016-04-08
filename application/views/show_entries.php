@@ -31,13 +31,14 @@
 
                 <div class="h3">
                     <?php  
-                    if ($this -> session -> userdata('is_logged_in')) {                     
+                    if ($this -> session -> userdata('username') == 'admin') {                     
                         echo '<div id="menu" class="menu">';
                         echo '<h5>Options</h5>';
                         echo '</div>';
                     }                     
                     ?>  
-                    <br/>                  
+                    <br/>
+
                     <div id="options" class="options">
                         <h5 class="margin">  
                             <?=anchor(base_url().'index.php/blog/edit/'.$entry -> id, $edit)?>                        
@@ -46,19 +47,21 @@
                             ?>                                                                          
                         </h5>
                     </div> 
+                    
+                </div>
+            <div class="h3">    
+                <h3 class="margin">
+                    Author: <?=$entry -> author?> <br/>
+                    Date: <?=$entry -> date?> 
+                </h3></div>   
+                <hr/>
+                
 
-                    <h3 class="margin">
-                        Author: <?=$entry -> author?> <br/>
-                        Date: <?=$entry -> date?> 
-                    </h3></div>   
-                    <hr/>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <h1>No entries</h1>
+        <?php endif; ?>
+    </div>
 
-
-                <?php endforeach; ?>
-            <?php else : ?>
-                <h1>No entries</h1>
-            <?php endif; ?>
-        </div>
-
-    </body>
-    </html>
+</body>
+</html>

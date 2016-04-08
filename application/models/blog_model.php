@@ -64,4 +64,6 @@ class Blog_model extends CI_Model {
             $this->db->set('password', $password);
             return $this->db->insert('users');
         }
+
+    
     }
