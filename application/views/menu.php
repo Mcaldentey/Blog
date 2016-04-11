@@ -15,29 +15,17 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
     <script>
 
-        $(document).ready(function(){
+        $(document).ready(function(){ //shows or hide the advanced options
 
-            $('#menu').click(function(){
+            $('.menu').click(function(){
                 if ($(".options").css("display") === ("block")) {
                     $(".options").hide();                 
                 } else {
                     $(".options").show();          
                 }
-                
-            });
-
-            $('#name').click(function(){
-
-
             });
 
         });
-
-        function users_register_not_empty(){
-            if ($('#register_name').length === 0) {
-                return false;
-            }
-        }
 
     </script>
 
@@ -45,19 +33,19 @@
 <body>
 
     <div class="nav">
-        <?php echo '<a href="'.base_url().'"><img src="http://i.imgur.com/HSfikT0.png" class="logo"></a>' ?>
-        <ul>              
+        <?php echo '<a href="'.base_url().'"><img src="http://i.imgur.com/HSfikT0.png" class="logo"></a>' ?> <!-- Logo -->
+        <ul>
             <?php
-                if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays Logout
+                if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays his name
                     $conected = $this->session->userdata('name');
                     echo '<li class="user"><b>'.$this->session->userdata('name').'</b></li>';
 
-                    echo '<li class="Logout"><a href="#">';
+                    echo '<li class="Logout"><a href="#">'; // if we have an user logged displays Logout
                     echo  anchor(base_url()."index.php/users/logout/", "Logout");
                     echo "</a></li>";
                 } else {
 
-                    echo ' <li class="Sign up"><a href="#">';
+                    echo ' <li class="Sign up"><a href="#">'; //If there's not users conected displays log in and log out
                     echo anchor(base_url().'index.php/users/new_user/','Sign Up').' ';
                     echo '</a></li>';
 
@@ -66,22 +54,22 @@
                     echo '</a></li>';
                 }
 
-                if ($this->session->userdata('is_logged_in')){ // if we have an user logged, show New entry
+                if ($this->session->userdata('is_logged_in')){ // if we have an user logged, shows New entry
                     echo '<li class="New Entry"><a href="#">';
                     echo anchor(base_url().'index.php/blog/entry/', 'New Entry');
                     echo '</a></li>';
                 }
 
-                if ($this -> session -> userdata('username') == 'admin') {                     
+                if ($this -> session -> userdata('username') == 'admin') { //If the admin is logged, display Users
                     echo '<li class="Users"><a href="#">';
                     echo anchor(base_url().'index.php/users/users_registred/', 'Users');
                     echo '</a></li>'; 
-             }                     
+                }                     
 
 
-         
+                
 
-         echo '<li class="All Entries"><a href="#">';
+                echo '<li class="All Entries"><a href="#">';
                 echo anchor(base_url(), 'All Entries'); //Shows all entries
                 echo '</a></li>';
                 ?>

@@ -24,7 +24,7 @@ class Users extends CI_Controller{
                         $this -> load -> view('signin', array('error'=>TRUE));
 
                 }
-                if($user = $this -> blog_model -> validate_credentials($username, $password)){
+                if($user = $this -> blog_model -> validate_credentials($username, $password)){  //if exists, insert on the database and redirect to index
                         $session = array(
                                 'name' => $user -> name,
                                 'username' => $username,
@@ -34,7 +34,7 @@ class Users extends CI_Controller{
                         redirect(base_url());
                 }
                 else{
-                        $this -> load -> view('signin', array('error'=>TRUE));
+                        $this -> load -> view('signin', array('error'=>TRUE)); //ifnot exists display an error
                 }
         }
 

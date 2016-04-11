@@ -24,14 +24,14 @@
                     $edit   = 'Edit'; 
                     $delete = 'Delete';                            
                 }
-                
                 ?>
-                <?php echo'<a href="'.'index.php/blog/view/'.$entry -> id.'"><img src="'.$entry -> image.'" class="resizeSmall" /></a>' ?>    
-                <h2><a><?=anchor(base_url().'index.php/blog/view/'.$entry -> id, $entry -> title)?></a></h2>
+                
+                <?php echo'<a href="'.'index.php/blog/view/'.$entry -> id.'"><img src="'.$entry -> image.'" class="resizeSmall" /></a>' ?>   
+                <h2><a><?=anchor(base_url().'index.php/blog/view/'.$entry -> id, $entry -> title)?></a></h2> <!-- Load the entry image and the title --> 
 
                 <div class="h3">
                     <?php  
-                    if ($this -> session -> userdata('username') == 'admin') {                     
+                    if ($this -> session -> userdata('username') == 'admin') { //If the admin is conected, displays the options
                         echo '<div id="menu" class="menu">';
                         echo '<h5>Options</h5>';
                         echo '</div>';
@@ -41,7 +41,7 @@
 
                     <div id="options" class="options">
                         <h5 class="margin">  
-                            <?=anchor(base_url().'index.php/blog/edit/'.$entry -> id, $edit)?>                        
+                            <?=anchor(base_url().'index.php/blog/edit/'.$entry -> id, $edit)?> <!-- Shows the options Edit / Delete -->                     
                             <?php
                             echo anchor(base_url().'index.php/blog/delete/'.$entry -> id, $delete, array('onclick' => "return confirm('Delete this Entry?')"))
                             ?>                                                                          

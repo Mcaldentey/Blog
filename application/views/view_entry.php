@@ -16,29 +16,29 @@
                         Author: <?= $entry -> author?> <br/>
                         Date: <?= $entry -> date?> <br/>
                         Tags: <?= tags($entry -> tags)?>
-                </h3> <!-- Loads the data from the Entry -->
+                </h3> <!-- Takes the data from the Entry -->
 
                 <?php
                 if(!empty($comments)){
                         echo '<p>Comments</p>';
-                        foreach($comments as $comment)
+                        foreach($comments as $comment) // Loads  the coments
                                 echo '<h3>'.$comment->author.'</h3>'. '<div class="p"><p class="comment">' .$comment->comment. '</p> <h3>' . $comment->date.' </h3> <hr />';
                 }
                 else{
                         echo '<h4>No Comments!</h4>';
                 }
-                ?> <!-- Loads  the coments -->
+                ?> 
                 
                 <p>
-                        Your comment:
-                        <?=form_open(base_url().'index.php/blog/comment/')?>
+                        Your comment: 
+                        <?=form_open(base_url().'index.php/blog/comment/')?> <!-- Make the option to submit a comment -->
                         <?=form_hidden('id_blog', $this -> uri -> segment(3))?>
                         <?=form_textarea('comment')?>
                         <br/>
                         <?=form_submit('submit','Send', 'class="buttonGrey"')?>
                         <?=form_close()?>  
 
-                </p> <!-- Make the option to submit a comment -->
+                </p> 
 
         </div>        
         <?php include('footer.php');?>    

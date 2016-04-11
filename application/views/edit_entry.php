@@ -10,7 +10,7 @@
 	<div class="entries">
 		<?php
 
-	    $hidden = array('id' => $entry_data->id); //Loads the Entry text 
+	    $hidden = array('id' => $entry_data->id); //Loads the Entry id 
 	    ?>
 	    <?=form_open(base_url().'index.php/blog/update_entry/', '', $hidden)?> <!-- Charges the text on a form -->
 	    <p>Title: <br/><?=form_input('title', $entry_data->title, 'class="title"')?></p>

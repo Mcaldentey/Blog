@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) { /* When device has less than 1200px */
 
   .logo {
     display: none;
@@ -16,7 +16,7 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) { /* When device has less than 800px */
 
   img.resizeSmall{
     display: block;

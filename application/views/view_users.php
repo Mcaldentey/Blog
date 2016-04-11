@@ -12,11 +12,11 @@
 	<div class="entries">
 
 		<?php
-		echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' 
+		echo anchor(base_url()."index.php/users/new_user/", "Add User", 'class="buttonGrey"') . '<br/>' // Shows the option to add an user
 		?>
 		</br>
-		<table id="users" class="display" cellspacing="0" width="100%">
-			<thead>
+		<table id="users" class="display" cellspacing="0" width="100%"> 
+			<thead> <!-- Sets the thread of the table -->
 				<tr>
 					<th><p>Id</p></th>
 					<th><p>Name</p></th>
@@ -24,7 +24,7 @@
 				</tr>
 			</thead>
 
-			<tbody>
+			<tbody> <!-- Sets the body of the table -->
 				<?php if (!empty($all_users)) : ?>
 					<?php foreach($all_users as $usu) : ?>
 						
