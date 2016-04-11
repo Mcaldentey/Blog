@@ -50,9 +50,9 @@ class Users extends CI_Controller{
         }
 
         public function register(){ //Register an user to the database
-                $name = $this->input->post('name');
-                $username = $this->input->post('username');
-                $password = $this->input->post('password');
+                $name = $this -> input -> post('name');
+                $username = $this -> input -> post('username');
+                $password = $this -> input -> post('password');
 
                 if ( ( strlen($name) == 0 ) or ( strlen($username) == 0 ) or ( strlen($password) == 0 ) ){
                         $this -> load -> view('user_register', array('error'=>TRUE));
