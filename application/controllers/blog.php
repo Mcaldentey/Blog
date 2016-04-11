@@ -51,7 +51,7 @@ class Blog extends CI_Controller {
                     'tags' => $this -> input -> post('tags'),
                     'image' => $this -> input -> post('image')
                     );             
-                    $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and call the function insert of blog_model
+                    $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and insert it on the table entries
                     redirect(base_url());
             }
             }
