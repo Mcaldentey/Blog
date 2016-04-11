@@ -49,34 +49,33 @@
                     </div> 
                     
                 </div>
-                <div class="h3">    
-                    <h3 class="margin">
-                        Author: <?=$entry -> author?> <br/>
-                        Date: <?=$entry -> date?> 
-                    </h3></div>   
-                    <hr/>
+                <h3 class="h3 margin">
+                    Author: <?=$entry -> author?> <br/>
+                    Date: <?=$entry -> date?> 
+                </h3>
+                <hr/>
 
 
-                <?php endforeach; ?>
-            <?php else : ?>
-                <h1>No entries</h1>
-            <?php endif; ?>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <h1>No entries</h1>
+        <?php endif; ?>
 
-            <?php
+        <?php
                 // Include the autoloader
-                require_once 'wurfl/src/autoload.php'; 
+        require_once 'wurfl/src/autoload.php'; 
                 // Create a configuration object  
-                $config = new ScientiaMobile\WurflCloud\Config();  
+        $config = new ScientiaMobile\WurflCloud\Config();  
                 // Set your WURFL Cloud API Key  
-                $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
+        $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
                 // Create the WURFL Cloud Client  
-                $client = new ScientiaMobile\WurflCloud\Client($config);  
+        $client = new ScientiaMobile\WurflCloud\Client($config);  
                 // Detect your device  
-                $client->detectDevice();  
+        $client->detectDevice();  
                 // Use the capabilities  
-                echo '<div class="deviceMobile">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
-            ?>       
-        </div>
-        <?php include('footer.php');?>    
-    </body>
-    </html>
+        echo '<div class="deviceMobile">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
+        ?>       
+    </div>
+    <?php include('footer.php');?>    
+</body>
+</html>

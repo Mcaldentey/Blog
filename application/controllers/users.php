@@ -18,7 +18,8 @@ class Users extends CI_Controller{
         
         public function validate(){ //function that validates if the user introduced exists on the database
                 $username = $this -> input -> post('username');
-                $password = $this -> input -> post('password');
+
+                $password = hash('sha256', ($this -> input -> post('password'))) ;
 
                 if ((strlen($username) == 0)  or (strlen($password) == 0 ) ) {
                         $this -> load -> view('signin', array('error'=>TRUE));
@@ -61,7 +62,7 @@ class Users extends CI_Controller{
                         $user = array(                                
                                 'name' => $name,
                                 'username' => $username,
-                                'password' => ($password)
+                                'password' =>hash('sha256', $password)
                                 );
                         if($this -> blog_model -> insert('users', $user)){                        
                                 redirect(base_url());
