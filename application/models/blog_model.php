@@ -56,7 +56,7 @@ class Blog_model extends CI_Model {
             return $this -> db -> get('users') -> result();            
         }
 
-        public function enterUser($name, $username, $password) {
+        public function enterUser($name, $username, $password) { //Insert an user to the database
 
             $this->db->set('name', $name); 
             $this->db->set('username', $username);
