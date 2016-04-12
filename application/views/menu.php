@@ -5,11 +5,11 @@
     <meta charset="utf-8">    
 
     <!-- CSS links -->
-    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/text.css">' ?>
-    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/images.css">' ?>
-    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/button.css">' ?>
-    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/navigationbar.css">' ?>
-    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/responsive.css">' ?>
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/text.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/images.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/button.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/navigationbar.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/responsive.css">
 
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
