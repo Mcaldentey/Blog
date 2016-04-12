@@ -1,5 +1,14 @@
+body {
+	background: #ECEFF1;
+}
+
 .entries {
-	margin: 0 25% 0 25%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+	background: #ffffff;
+	padding: 50px;
 
 }
 
