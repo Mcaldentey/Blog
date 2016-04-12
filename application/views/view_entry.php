@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- CSS links -->
+        <link rel="stylesheet" type="text/css"  href='/assets/css/text.css'>
+        <link rel="stylesheet" type="text/css"  href='/assets/css/images.css'>
+        <link rel="stylesheet" type="text/css"  href='/assets/css/button.css'>
+        <link rel="stylesheet" type="text/css"  href='/assets/css/navigationbar.css'> 
+        <link rel="stylesheet" type="text/css"  href='/assets/css/responsive.css'>     
         <meta charset="utf-8">
         <title><?=$entry->title?></title>      
 </head>
