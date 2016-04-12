@@ -5,11 +5,11 @@
     <meta charset="utf-8">    
 
     <!-- CSS links -->
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/text.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/images.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/button.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/navigationbar.css'> 
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/styles/responsive.css'> 
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/text.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/images.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/button.css">
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/navigationbar.css"> 
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/responsive.css"> 
 
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
@@ -33,7 +33,7 @@
 <body>
 
     <div class="nav">
-        <?php echo '<a href="'.base_url().'"><img src="http://i.imgur.com/HSfikT0.png" class="logo"></a>' ?> <!-- Logo -->
+        <?php echo '<a href="'.base_url().'"><img src="'.base_url().'assets/imgs/logo.png" class="logo"></a>' ?> <!-- Logo -->
         <ul>
             <?php
                 if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays his name
@@ -46,11 +46,11 @@
                 } else {
 
                     echo ' <li class="Sign up"><a href="#">'; //If there's not users conected displays log in and log out
-                    echo anchor(base_url().'index.php/users/new_user/','Sign Up').' ';
+                    echo anchor(base_url().'index.php/users/new_user/','Sign Up');
                     echo '</a></li>';
 
                     echo ' <li class="Sign in"><a href="#">';
-                    echo anchor(base_url().'index.php/users/signin/','Sign In').' ';
+                    echo anchor(base_url().'index.php/users/signin/','Sign In');
                     echo '</a></li>';
                 }
 
