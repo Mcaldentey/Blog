@@ -5,11 +5,11 @@
     <meta charset="utf-8">    
 
     <!-- CSS links -->
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/assets/css/text.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/assets/css/images.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/assets/css/button.css'>
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/assets/css/navigationbar.css'> 
-    <link rel="stylesheet" type="text/css"  href='http://localhost/blog/assets/css/responsive.css'> 
+    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/text.css">' ?>
+    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/images.css">' ?>
+    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/button.css">' ?>
+    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/navigationbar.css">' ?>
+    <?php echo '<link rel="stylesheet" type="text/css"  href="'.base_url().'assets/css/responsive.css">' ?>
 
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
@@ -33,7 +33,7 @@
 <body>
 
     <div class="nav">
-        <?php echo '<a href="'.base_url().'"><img src="http://localhost/blog/assets/imgs/logo.png" class="logo"></a>' ?> <!-- Logo -->
+        <?php echo '<a href="'.base_url().'"><img src="'.base_url().'assets/imgs/logo.png" class="logo"></a>' ?> <!-- Logo -->
         <ul>
             <?php
                 if ($this->session->userdata('is_logged_in')){ // if we have an user logged displays his name
