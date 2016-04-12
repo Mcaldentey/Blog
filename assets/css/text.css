@@ -10,8 +10,8 @@ body {
 	background: #ffffff;
 	padding: 50px;
 	-webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.26);
-     -moz-box-shadow:    0px 10px 30px 0px rgba(50, 50, 50, 0.26);
-     box-shadow:         0px 10px 30px 0px rgba(50, 50, 50, 0.26);
+    -moz-box-shadow:    0px 10px 30px 0px rgba(50, 50, 50, 0.26);
+    box-shadow:         0px 10px 30px 0px rgba(50, 50, 50, 0.26);
 
 }
 
@@ -120,3 +120,7 @@ h5.margin {
 	margin-left: 20px; 	
 }
 
+.head_entry{
+	display: inline-flex;
+
+}

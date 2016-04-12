@@ -10,7 +10,7 @@ img.resizeSmall{
 img.resizeBig{
 	margin-top: 20px;
 	margin-bottom: 20px;
-    width:auto;
+    width:100%;
     height: auto;
 }
 
