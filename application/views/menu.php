@@ -42,7 +42,7 @@
                     echo '</a></li>';
                 }
 
-                if ($this -> session -> userdata('username') == 'admin') { //If the admin is logged, display Users
+                if ($this -> session -> userdata('admin') == 1) { //If the admin is logged, display Users
                     echo '<li class="Users"><a href="#">';
                     echo anchor(base_url().'index.php/users/users_registred/', 'Users');
                     echo '</a></li>'; 

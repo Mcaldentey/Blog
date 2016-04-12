@@ -26,9 +26,15 @@ class Users extends CI_Controller{
 
                 }
                 if($user = $this -> blog_model -> validate_credentials($username, $password)){  //if exists, insert on the database and redirect to index
+                        $admin = 0;
+                        if ($admin = $this -> blog_model -> validate_admin($username)){
+                                $admin = 1;
+                        }
+
                         $session = array(
                                 'name' => $user -> name,
                                 'username' => $username,
+                                'admin' => $admin,
                                 'is_logged_in' => TRUE,                        
                                 );
                         $this -> session -> set_userdata($session);
@@ -38,6 +44,9 @@ class Users extends CI_Controller{
                         $this -> load -> view('signin', array('error'=>TRUE)); //ifnot exists display an error
                 }
         }
+
+
+
 
         
         public function logout(){ //finishes the session

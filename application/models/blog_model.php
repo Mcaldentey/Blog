@@ -19,6 +19,13 @@ class Blog_model extends CI_Model {
         return $this -> db -> get('users')->row();
     }
 
+    public function validate_admin($username){ // return the row on the Db from that user and that password
+
+        $this -> db ->where('username', $username);
+        $this -> db ->where('admin', 1);
+        return $this -> db -> get('users')->row();
+    }
+
         public function getEntry($id){ // get the Entty with that id
 
             $this -> db -> where('id', $id);
