@@ -2,6 +2,7 @@
 @media screen and (max-width: 1200px) { /* When device has less than 1200px */
 
   .logo {
+    margin: 0;
     display: none;
   }
   
@@ -27,7 +28,6 @@
   }
 
   .nav li {
-    margin-left: 20px;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
     line-height: 40px;
