@@ -4,7 +4,8 @@ class Blog extends CI_Controller {
 	
     public function __construct(){
         parent::__construct();
-        $this->load->model('blog_model');              
+        date_default_timezone_set('Europe/Madrid');
+        $this->load->model('blog_model');   
     }
     
         public function index(){ //Loads the view show_entries and complete it

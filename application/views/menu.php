@@ -52,7 +52,7 @@
                 
 
                 echo '<li class="All Entries"><a href="#">';
-                echo anchor(base_url(), 'All Entries'); //Shows all entries
+                    echo anchor(base_url(), 'All Entries'); //Shows all entries
                 echo '</a></li>';
                 ?>
 
