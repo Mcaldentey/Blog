@@ -9,6 +9,9 @@ body {
 	margin-right: 20%;
 	background: #ffffff;
 	padding: 50px;
+	-webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.26);
+     -moz-box-shadow:    0px 10px 30px 0px rgba(50, 50, 50, 0.26);
+     box-shadow:         0px 10px 30px 0px rgba(50, 50, 50, 0.26);
 
 }
 
