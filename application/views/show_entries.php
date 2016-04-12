@@ -5,12 +5,9 @@
     <title>View Entries</title> 
     <!-- Datatables links -->    
 
-<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">   
     
-=======
->>>>>>> 5ded3f14793d4dd0ac028ecb860dc3ceb7ef9adc
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
     <script>
@@ -27,11 +24,7 @@
 
         });
 
-<<<<<<< HEAD
     </script>
-=======
-    </script> 
->>>>>>> 5ded3f14793d4dd0ac028ecb860dc3ceb7ef9adc
 
 </head>
 <body>

@@ -10,8 +10,6 @@
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/button.css">
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/navigationbar.css">
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/responsive.css">
-<<<<<<< HEAD
-=======
 
     <!-- JQuery Scripts -->
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
@@ -30,7 +28,6 @@
         });
 
     </script>
->>>>>>> 5ded3f14793d4dd0ac028ecb860dc3ceb7ef9adc
 
 </head>
 <body>
