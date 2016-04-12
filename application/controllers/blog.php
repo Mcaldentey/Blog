@@ -10,13 +10,13 @@ class Blog extends CI_Controller {
     
         public function index(){ //Loads the view show_entries and complete it
 
-            $data['entries'] = $this-> blog_model -> getEntries();             
+            $data['entries'] = $this-> blog_model -> getEntries();         
             
             if ($this->session->userdata('is_logged_in')) {
                 $username = $this->session->userdata('username');                
             }
             
-            $this->load->view('show_entries', $data, $data);
+            $this->load->view('show_entries', $data);
         }
 
         public function entry(){ //Loads the view new_entry
