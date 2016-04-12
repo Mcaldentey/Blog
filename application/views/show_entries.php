@@ -7,6 +7,24 @@
 
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">   
+    
+    <!-- JQuery Scripts -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+    <script>
+
+        $(document).ready(function(){ //shows or hide the advanced options
+
+            $('.menu').click(function(){
+                if ($(".options").css("display") === ("block")) {
+                    $(".options").hide();                 
+                } else {
+                    $(".options").show();          
+                }
+            });
+
+        });
+
+    </script>
 
 </head>
 <body>
