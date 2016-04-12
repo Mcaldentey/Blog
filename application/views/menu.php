@@ -9,25 +9,7 @@
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/images.css">
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/button.css">
     <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/navigationbar.css">
-    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/responsive.css">
-
-    <!-- JQuery Scripts -->
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
-    <script>
-
-        $(document).ready(function(){ //shows or hide the advanced options
-
-            $('.menu').click(function(){
-                if ($(".options").css("display") === ("block")) {
-                    $(".options").hide();                 
-                } else {
-                    $(".options").show();          
-                }
-            });
-
-        });
-
-    </script>
+    <link rel="stylesheet" type="text/css"  href="<?=base_url()?>assets/css/responsive.css">    
 
 </head>
 <body>
