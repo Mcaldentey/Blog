@@ -86,18 +86,18 @@
     <?php endif; ?>
 
     <?php
-                // Include the autoloader
-    require_once 'wurfl/src/autoload.php'; 
-                // Create a configuration object  
-    $config = new ScientiaMobile\WurflCloud\Config();  
-                // Set your WURFL Cloud API Key  
-    $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
-                // Create the WURFL Cloud Client  
-    $client = new ScientiaMobile\WurflCloud\Client($config);  
-                // Detect your device  
-    $client->detectDevice();  
-                // Use the capabilities  
-    echo '<div class="deviceMobile">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
+        // Include the autoloader
+        require_once 'wurfl/src/autoload.php'; 
+        // Create a configuration object  
+        $config = new ScientiaMobile\WurflCloud\Config();  
+        // Set your WURFL Cloud API Key  
+        $config->api_key = '506180:tOpobuIFCjlmTaRa2WvbxZx4fe7QpTb6';   
+        // Create the WURFL Cloud Client  
+        $client = new ScientiaMobile\WurflCloud\Client($config);  
+        // Detect your device  
+        $client->detectDevice();  
+        // Use the capabilities  
+        echo '<div class="deviceMobile">Conected from: '.$client->getDeviceCapability('complete_device_name').'</div>';                  
     ?>       
 </div>
 <?php include('footer.php');?>    
