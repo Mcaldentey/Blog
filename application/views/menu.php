@@ -71,7 +71,6 @@
                 ?>       
             </ul>
             <div class="hr"><hr class="blue" /></div>
-
         </div>        
 
     </body>
