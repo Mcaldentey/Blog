@@ -20,41 +20,43 @@ class Blog extends CI_Controller {
         }
 
         public function entry(){ //Loads the view new_entry
-            
+
             $this -> load -> view('new_entry');
         }
         
         public function insert_entry(){ //Add a new entry with the data submited from the view new_entry
-            
+
             $title = $this -> input -> post('title');
+            $subtitle = $this -> input -> post('subtitle');
             $content = $this -> input -> post('content');
             $image = $this -> input -> post('image');
             $tags = $this -> input -> post('tags');
 
             //Check that all the fields are completed
-            if ( (strlen($title) == 0 ) or (strlen($content) == 0 ) or (strlen($image) == 0 ) or (strlen($tags) == 0 ) ) {
+            if ( (strlen($title) == 0 ) or (strlen($content) == 0 ) or (strlen($image) == 0 ) or (strlen($tags) == 0 ) or (strlen($subtitle) == 0) ) {
 
-               $this -> load -> view('new_entry', array('error'=>TRUE));
+             $this -> load -> view('new_entry', array('error'=>TRUE));
 
-            } else {
-                $user = 'Anonymous';
+         } else {
+            $user = 'Anonymous';
 
-                if ( $this -> session -> userdata('is_logged_in')) {
-                    $user = $this -> session -> userdata('name');
-                }
+            if ( $this -> session -> userdata('is_logged_in')) {
+                $user = $this -> session -> userdata('name');
+            }
 
-                $entry = array( 
-                    'permalink' => permalink($this -> input -> post('title')),
-                    'author' => $user,
-                    'title' => $this -> input -> post('title'),
-                    'content' => $this -> input -> post('content'),
-                    'date' => date('Y-m-d H:i:s'),
-                    'tags' => $this -> input -> post('tags'),
-                    'image' => $this -> input -> post('image')
-                    );             
+            $entry = array( 
+                'permalink' => permalink($this -> input -> post('title')),
+                'author' => $user,
+                'title' => $this -> input -> post('title'),
+                'subtitle' => $subtitle,
+                'content' => $this -> input -> post('content'),
+                'date' => date('Y-m-d H:i:s'),
+                'tags' => $this -> input -> post('tags'),
+                'image' => $this -> input -> post('image')
+                );             
                     $this -> blog_model -> insert('entries', $entry); // Saves all the data of the entry in $entry and insert it on the table entries
                     redirect(base_url());
-            }
+                }
             }
             
 
@@ -67,7 +69,7 @@ class Blog extends CI_Controller {
         }
 
         public function comment(){ //Loads the Comentaries part of the view
-            
+
             $id_blog = $this -> input -> post('id_blog');
 
             $user = 'Anonymous';
@@ -86,7 +88,7 @@ class Blog extends CI_Controller {
         }
 
         public function edit() { //Creates the entry from the edit option
-            
+
             $id_entry = $this->uri->segment(3);
             $data['entry_data'] = $this->blog_model->getEntryData($id_entry);  
             
@@ -94,7 +96,7 @@ class Blog extends CI_Controller {
         }
 
         public function getEntryData($entry) { //Return the data from an entry
-            
+
             $this->db->where('id', $entry);
             $q = $this->db->get('entries');
             
@@ -103,10 +105,11 @@ class Blog extends CI_Controller {
 
 
         public function update_entry() { //Confirms the edit and redirect to that entry
-            
+
             $id = $this -> input -> post('id');
             $entry = array(
                 'title'  => $this -> input -> post('title'),
+                'subtitle' => $this -> input -> post('subtitle'),
                 'content'   => $this -> input -> post('content'),
                 'tags'   => $this -> input -> post('tags'),
                 );
@@ -126,6 +129,6 @@ class Blog extends CI_Controller {
 
         public function deleteEntry($id) {
 
-           return $this->db->delete('entries', array('id' => $id)); 
-       }
-   }
+         return $this->db->delete('entries', array('id' => $id)); 
+     }
+ }

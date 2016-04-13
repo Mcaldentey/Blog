@@ -32,7 +32,7 @@
 
     <?php if (!empty($entries)) : ?> <!-- Shows all the entries -->
         <?php foreach($entries as $entry) : ?>
-           <div class="entries">  
+         <div class="entries">  
             <?php                            
             $edit   = ' '; 
             $delete = ' ';   
@@ -46,6 +46,12 @@
             <div class="head_entry">
                 <?php echo'<a href="'.'index.php/blog/view/'.$entry -> id.'"><img src="'.$entry -> image.'" class="resizeSmall" /></a>' ?>   
                 <h2><a><?=anchor(base_url().'index.php/blog/view/'.$entry -> id, $entry -> title)?></a></h2> <!-- Load the entry image and the title --> 
+            </div>
+            <div class="subtitle">
+                <?php
+                echo'<a href="'.'index.php/blog/view/'.$entry -> id.'">' ;
+                echo $entry -> subtitle;
+                echo '</a>' ?>
             </div>
             <div class="h3">
                 <?php  
