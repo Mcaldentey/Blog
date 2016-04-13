@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php require_once 'wurfl/src/autoload.php'; ?>
 <html lang="en">
 <head>
     <meta charset="utf-8">    

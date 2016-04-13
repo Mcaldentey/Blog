@@ -27,6 +27,10 @@
     
   }
 
+  .head_entry {
+    display: inherit;
+  }
+
   .nav li {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2em;
