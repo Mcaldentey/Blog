@@ -13,8 +13,9 @@
 <body>
         <?php include('menu.php');?>
         <div class="entries">                
-                <h2><?=$entry -> title?></h2>
+                <h2><a><?=$entry -> title?></a></h2>
                 <?php echo '<img src="'.$entry -> image.'" class="resizeBig">' ?>
+                <div class="subtitle"> <?php echo $entry -> subtitle ?> </div>
 
                 <p><?=$entry -> content?></p>
 
