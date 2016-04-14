@@ -86,8 +86,6 @@
     <?php endif; ?>
 
     <?php
-        // Include the autoloader
-        require_once 'wurfl/src/autoload.php'; 
         // Create a configuration object  
         $config = new ScientiaMobile\WurflCloud\Config();  
         // Set your WURFL Cloud API Key  
