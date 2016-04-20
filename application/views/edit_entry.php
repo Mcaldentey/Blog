@@ -16,7 +16,8 @@
 	    <p>Title: <br/><?=form_input('title', $entry_data->title, 'class="title"')?></p>
 	    <p>Subtitle: <br/><?=form_input('subtitle', $entry_data->subtitle, 'class="title"')?></p>
 	    <p>Content: <br/><?=form_textarea('content', $entry_data->content, 'class="textarea" placeholder="Edit the Entry"')?></p>
-	    <p>Tags: <br/><?=form_input('tags', '', 'placeholder="Comma separated"')?></p>
+	    <p>Image: <br/><?=form_input('image', $entry_data->image, 'class="title" placeholder="Image URL"')?></p>
+	    <p>Tags: <br/><?=form_input('tags', $entry_data->tags, 'placeholder="Comma separated"')?></p>
 	    <?=form_submit('submit', 'Update', 'class="buttonGrey"')?>
 	</div>
 	<?php include('footer.php');?>    

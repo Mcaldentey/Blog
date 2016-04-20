@@ -111,6 +111,7 @@ class Blog extends CI_Controller {
                 'title'  => $this -> input -> post('title'),
                 'subtitle' => $this -> input -> post('subtitle'),
                 'content'   => $this -> input -> post('content'),
+                'image' => $this->input->post('image'),
                 'tags'   => $this -> input -> post('tags'),
                 );
             
